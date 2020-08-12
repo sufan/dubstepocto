@@ -15,6 +15,16 @@
 		54E39C0D24E274D700E9E7DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39BE224E274D400E9E7DD /* ContentView.swift */; };
 		54E39C0E24E274D700E9E7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E39BE324E274D600E9E7DD /* Assets.xcassets */; };
 		54E39C0F24E274D700E9E7DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E39BE324E274D600E9E7DD /* Assets.xcassets */; };
+		54E39C2524E2752100E9E7DD /* TestMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2024E2752100E9E7DD /* TestMenuView.swift */; };
+		54E39C2624E2752100E9E7DD /* TestMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2024E2752100E9E7DD /* TestMenuView.swift */; };
+		54E39C2C24E27F9000E9E7DD /* RecipeTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2B24E27F8F00E9E7DD /* RecipeTestModel.swift */; };
+		54E39C2D24E27F9000E9E7DD /* RecipeTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2B24E27F8F00E9E7DD /* RecipeTestModel.swift */; };
+		54E39C2F24E2D2E100E9E7DD /* TestRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2E24E2D2E100E9E7DD /* TestRecipeView.swift */; };
+		54E39C3024E2D2E100E9E7DD /* TestRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C2E24E2D2E100E9E7DD /* TestRecipeView.swift */; };
+		54E39C3224E2F58000E9E7DD /* RecipeTestRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C3124E2F58000E9E7DD /* RecipeTestRestaurant.swift */; };
+		54E39C3324E2F58000E9E7DD /* RecipeTestRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C3124E2F58000E9E7DD /* RecipeTestRestaurant.swift */; };
+		54E39C3524E3868F00E9E7DD /* TestMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C3424E3868F00E9E7DD /* TestMenuCell.swift */; };
+		54E39C3624E3868F00E9E7DD /* TestMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C3424E3868F00E9E7DD /* TestMenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,11 @@
 		54E39C0324E274D700E9E7DD /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E39C0724E274D700E9E7DD /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		54E39C0924E274D700E9E7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54E39C2024E2752100E9E7DD /* TestMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuView.swift; sourceTree = "<group>"; };
+		54E39C2B24E27F8F00E9E7DD /* RecipeTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTestModel.swift; sourceTree = "<group>"; };
+		54E39C2E24E2D2E100E9E7DD /* TestRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRecipeView.swift; sourceTree = "<group>"; };
+		54E39C3124E2F58000E9E7DD /* RecipeTestRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTestRestaurant.swift; sourceTree = "<group>"; };
+		54E39C3424E3868F00E9E7DD /* TestMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +113,11 @@
 		54E39BE024E274D400E9E7DD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				54E39BE124E274D400E9E7DD /* PotpourriApp.swift */,
-				54E39BE224E274D400E9E7DD /* ContentView.swift */,
 				54E39BE324E274D600E9E7DD /* Assets.xcassets */,
+				54E39BE124E274D400E9E7DD /* PotpourriApp.swift */,
+				54E39C2B24E27F8F00E9E7DD /* RecipeTestModel.swift */,
+				54E39C3124E2F58000E9E7DD /* RecipeTestRestaurant.swift */,
+				54E39C1E24E274E300E9E7DD /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -149,6 +166,17 @@
 				54E39C0924E274D700E9E7DD /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		54E39C1E24E274E300E9E7DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54E39BE224E274D400E9E7DD /* ContentView.swift */,
+				54E39C3424E3868F00E9E7DD /* TestMenuCell.swift */,
+				54E39C2024E2752100E9E7DD /* TestMenuView.swift */,
+				54E39C2E24E2D2E100E9E7DD /* TestRecipeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E39C2524E2752100E9E7DD /* TestMenuView.swift in Sources */,
+				54E39C2F24E2D2E100E9E7DD /* TestRecipeView.swift in Sources */,
 				54E39C0C24E274D700E9E7DD /* ContentView.swift in Sources */,
+				54E39C2C24E27F9000E9E7DD /* RecipeTestModel.swift in Sources */,
+				54E39C3524E3868F00E9E7DD /* TestMenuCell.swift in Sources */,
 				54E39C0A24E274D700E9E7DD /* PotpourriApp.swift in Sources */,
+				54E39C3224E2F58000E9E7DD /* RecipeTestRestaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E39C2624E2752100E9E7DD /* TestMenuView.swift in Sources */,
+				54E39C3024E2D2E100E9E7DD /* TestRecipeView.swift in Sources */,
 				54E39C0D24E274D700E9E7DD /* ContentView.swift in Sources */,
+				54E39C2D24E27F9000E9E7DD /* RecipeTestModel.swift in Sources */,
+				54E39C3624E3868F00E9E7DD /* TestMenuCell.swift in Sources */,
 				54E39C0B24E274D700E9E7DD /* PotpourriApp.swift in Sources */,
+				54E39C3324E2F58000E9E7DD /* RecipeTestRestaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

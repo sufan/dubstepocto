@@ -15,3 +15,9 @@ struct PotpourriApp: App {
         }
     }
 }
+
+struct PotpourriApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
