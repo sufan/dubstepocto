@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540225C224E51B9F00D18B7A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 540225C124E51B9F00D18B7A /* SDWebImageSwiftUI */; };
 		54E39BFD24E274D700E9E7DD /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39BFC24E274D700E9E7DD /* Tests_iOS.swift */; };
 		54E39C0824E274D700E9E7DD /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C0724E274D700E9E7DD /* Tests_macOS.swift */; };
 		54E39C0A24E274D700E9E7DD /* PotpourriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39BE124E274D400E9E7DD /* PotpourriApp.swift */; };
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540225C224E51B9F00D18B7A /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +197,9 @@
 			dependencies = (
 			);
 			name = "Potpourri (iOS)";
+			packageProductDependencies = (
+				540225C124E51B9F00D18B7A /* SDWebImageSwiftUI */,
+			);
 			productName = "Potpourri (iOS)";
 			productReference = 54E39BE824E274D700E9E7DD /* Potpourri.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +291,9 @@
 				Base,
 			);
 			mainGroup = 54E39BDB24E274D400E9E7DD;
+			packageReferences = (
+				540225C024E51B9F00D18B7A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 54E39BE924E274D700E9E7DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -724,6 +732,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		540225C024E51B9F00D18B7A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		540225C124E51B9F00D18B7A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 540225C024E51B9F00D18B7A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54E39BDC24E274D400E9E7DD /* Project object */;
 }
