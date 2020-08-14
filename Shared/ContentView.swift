@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var store = Restaurant()
-
     var body: some View {
-        TestMenuView(store: store)
+        TestMenuView()
+            .environmentObject(StoreData())
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        TestMenuView(store: testStore)
+        ContentView()
     }
 }
