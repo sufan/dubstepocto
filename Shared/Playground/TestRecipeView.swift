@@ -10,84 +10,55 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct TestRecipeView: View {
-    @EnvironmentObject var store: StoreData
     @State private var zoomed = false
-    var recipe: Recipe
-    
-    var recipeIndex: Int {
-        store.menu.firstIndex(where: { $0.id == recipe.id }) ?? 0
-    }
+    var show: TVShowModel?
     
     var body: some View {
-        Group {
-            VStack {
-                if zoomed {
-                    ImageView(imageName: recipe.imageName)
-                        .aspectRatio(contentMode: zoomed ? .fill : .fit)
-                        .onTapGesture {
-                            withAnimation {
-                                zoomed.toggle()
-                            }
-                        }
-                } else {
-                    CircleImage(imageName: recipe.imageName)
-                        .aspectRatio(contentMode: zoomed ? .fill : .fit)
-                        .onTapGesture {
-                            withAnimation {
-                                zoomed.toggle()
-                            }
-                        }
-                    
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("Ingredients")
-                                .font(.largeTitle)
-                            
-                            Spacer()
-                            
-                            Button(action: {
-                                store.menu[recipeIndex].isPopular.toggle()
-                            }) {
-                                if store.menu[recipeIndex].isPopular {
-                                    Image(systemName: "star.fill")
-                                        .font(.title)
-                                        .foregroundColor(.yellow)
-                                } else {
-                                    Image(systemName: "star")
-                                        .font(.title)
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                        }
-                        
-                        HStack(alignment: .top) {
-                            let hashValue = abs(recipe.name.hash)
-                            ForEach(1..<recipe.ingredientCount+1) { i in
-                                let ingredientIndex = hashValue/(i*10) % recipe.ingredientCount
-                                Image(systemName: ingredients[ingredientIndex])
-                                    .font(.headline)
-                                    .imageScale(.large)
-                            }
-                            Spacer()
+        ScrollView {
+            if zoomed {
+                ImageView(imageName: show?.image?.medium.httpsString ?? "")
+                    .aspectRatio(contentMode: .fill)
+                    .onTapGesture {
+                        withAnimation {
+                            zoomed.toggle()
                         }
                     }
-                    .padding(.all)
-                    .transition(.move(edge: .bottom))
+            } else {
+                VStack {
+                    CircleImage(imageName: show?.image?.medium.httpsString ?? "")
+                        .aspectRatio(contentMode: .fit)
+                        .onTapGesture {
+                            withAnimation {
+                                zoomed.toggle()
+                            }
+                        }
                     
-                    Spacer()
+                    Text(show?.summary ?? "N/A")
+                        .font(.body)
+                    
+                    HStack {
+                        let hashValue = abs(show?.name.hash ?? 0)
+                        ForEach(1..<(hashValue % 10)+1) { i in
+                            let ingredientIndex = hashValue/(i*10) % unown.count
+                            Image(systemName: unown[ingredientIndex])
+                                .font(.headline)
+                                .imageScale(.large)
+                        }
+                        Spacer()
+                    }
+                    .padding(.top)
                 }
+                .padding()
             }
         }
-        .navigationTitle(recipe.name)
-        .edgesIgnoringSafeArea(.bottom)
+        .navigationTitle(show?.name ?? "")
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TestRecipeView(recipe: testData[0])
-                .environmentObject(StoreData())
+            TestRecipeView(show: testShow)
         }
     }
 }

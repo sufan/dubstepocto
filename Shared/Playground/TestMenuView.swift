@@ -8,30 +8,26 @@
 import SwiftUI
 
 struct TestMenuView: View {
-    @EnvironmentObject var store: StoreData
+    @ObservedObject var observed: TVObserverable
     
     var body: some View {
         NavigationView {
             GeometryReader(content: { geometry in
-                List {
-                    Toggle("Popular Only", isOn: $store.showPopularOnly)
-                    
-                    ForEach(store.menu) { recipe in
-                        if !self.store.showPopularOnly || recipe.isPopular {
-                            TestMenuCell(recipe: recipe)
-                        }
+                List {                    
+                    ForEach(observed.schedules) { character in
+                        TestMenuCell(schedule: character)
                     }
                     .onMove(perform: moveRecipe)
                     .onDelete(perform: deleteRecipe)
                     
                     HStack {
                         Spacer()
-                        Text("\(store.menu.count) Entrée")
+                        Text("\(observed.schedules.count) characters")
                             .foregroundColor(.secondary)
                         Spacer()
                     }
                 }
-                .navigationTitle("Menu")
+                .navigationTitle("Characters")
                 .toolbar {
                     #if os(iOS)
                     EditButton()
@@ -41,40 +37,45 @@ struct TestMenuView: View {
                 .environment(\.geometry, geometry.size)
             })
             
-            Text("Select an Entrée")
+            Text("Select a character")
                 .font(.largeTitle)
         }
     }
     
     func addRecipe() {
         withAnimation {
-            store.menu.append(testRecipe)
+            observed.schedules.append(testSchedule)
         }
     }
     
     func moveRecipe(from: IndexSet, to: Int) {
         withAnimation {
-            store.menu.move(fromOffsets: from, toOffset: to)
+            observed.schedules.move(fromOffsets: from, toOffset: to)
         }
     }
     
     func deleteRecipe(offsets: IndexSet) {
         withAnimation {
-            store.menu.remove(atOffsets: offsets)
+            observed.schedules.remove(atOffsets: offsets)
         }
     }
 }
 
 struct TestMenuView_Previews: PreviewProvider {
+    class RMTestObserverable: TVObserverable {
+        override init() {
+            super.init()
+            self.schedules = testSchedules
+        }
+    }
+
     static var previews: some View {
         Group {
-            TestMenuView()
-                .environmentObject(StoreData())
-            TestMenuView()
+            TestMenuView(observed: RMTestObserverable())
+            TestMenuView(observed: RMTestObserverable())
                 .previewDevice("iPhone SE (2nd generation)")
                 .preferredColorScheme(.dark)
                 .environment(\.sizeCategory, .accessibilityExtraLarge)
-                .environmentObject(StoreData())
         }
     }
 }
