@@ -14,12 +14,12 @@ struct TestLazyView: View {
         NavigationView {
             GeometryReader(content: { geometry in
                 ScrollView {
+                    if scheduleObservable.schedules.count == 0 {
+                        ProgressView()
+                            .offset(y: geometry.size.height/2)
+                    }
+                    
                     LazyVStack {
-                        if scheduleObservable.schedules.count == 0 {
-                            ProgressView()
-                                .offset(y: geometry.size.height/2)
-                        }
-
                         ForEach(scheduleObservable.schedules) { schedule in
                             TestMenuCell(schedule: schedule)
                             Divider()
@@ -39,17 +39,10 @@ struct TestLazyView: View {
 }
 
 struct TestLazyView_Previews: PreviewProvider {
-    class RMTestObserverable: TVObserverable {
-        override init() {
-            super.init()
-            self.schedules = testSchedules
-        }
-    }
-    
     static var previews: some View {
         Group {
-            TestLazyView(scheduleObservable: RMTestObserverable())
-            TestLazyView(scheduleObservable: RMTestObserverable())
+            TestLazyView(scheduleObservable: TVObserverable(source: .preview))
+            TestLazyView(scheduleObservable: TVObserverable(source: .preview))
                 .preferredColorScheme(.dark)
                 .previewDevice("iPhone SE (2nd generation)")
         }
