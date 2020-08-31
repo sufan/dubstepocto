@@ -9,7 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TestLazyView(scheduleObservable: TVObserverable())
+        TabView {
+            let observable = TVObserverable()
+            TestLazyView(scheduleObservable: observable)
+                .tabItem {
+                    Image(systemName: "square.stack.3d.up")
+                    Text("Stack")
+                }
+                        
+            TestGridView(scheduleObservable: observable)
+                .tabItem {
+                    Image(systemName: "square.grid.2x2")
+                    Text("Grid")
+                }
+        }
     }
 }
 

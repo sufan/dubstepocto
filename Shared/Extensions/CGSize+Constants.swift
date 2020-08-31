@@ -17,4 +17,9 @@ extension CGSize {
      The size whose width and height are widescreen ratio.
      */
     public static var wide = CGSize(width: 16.0,height: 9.0)
+    
+    /**
+     The size whose width and height are A4 ratio.
+     */
+    public static var A4 = CGSize(width: 210,height: 297)
 }

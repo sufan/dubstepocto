@@ -9,15 +9,29 @@ import Alamofire
 import SwiftUI
 
 class TVObserverable: ObservableObject {
+    enum Source {
+        case server
+        case preview
+    }
+    
     @Published var schedules = [TVScheduleModel]()
     
     private let apiPath = "/schedule"
     
-    init() {
-        fetchCharacters()
+    init(source: Source = .server) {
+        switch source {
+        case .server:
+            fetchCharacters()
+        case .preview:
+            fetchPreview()
+        }
+    }
+        
+    private func fetchPreview() {
+        self.schedules = testSchedules
     }
     
-    func fetchCharacters() {
+    private func fetchCharacters() {
         AF.request(TVEndPoints.baseURL + apiPath)
             .validate()
             .responseDecodable(of: [TVScheduleModel].self) { response in
