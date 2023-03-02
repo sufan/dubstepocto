@@ -18,25 +18,25 @@
 		540225D124E51EA600D18B7A /* TVObserverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225CF24E51EA600D18B7A /* TVObserverable.swift */; };
 		540225D424E51EEC00D18B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D324E51EEC00D18B7A /* ContentView.swift */; };
 		540225D524E51EEC00D18B7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D324E51EEC00D18B7A /* ContentView.swift */; };
-		540225DD24E51EF900D18B7A /* TestMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D724E51EF900D18B7A /* TestMenuCell.swift */; };
-		540225DE24E51EF900D18B7A /* TestMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D724E51EF900D18B7A /* TestMenuCell.swift */; };
-		540225DF24E51EF900D18B7A /* TestRMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D824E51EF900D18B7A /* TestRMData.swift */; };
-		540225E024E51EF900D18B7A /* TestRMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D824E51EF900D18B7A /* TestRMData.swift */; };
-		540225E124E51EF900D18B7A /* TestRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D924E51EF900D18B7A /* TestRecipeView.swift */; };
-		540225E224E51EF900D18B7A /* TestRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D924E51EF900D18B7A /* TestRecipeView.swift */; };
+		540225DD24E51EF900D18B7A /* TabTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D724E51EF900D18B7A /* TabTodayCell.swift */; };
+		540225DE24E51EF900D18B7A /* TabTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D724E51EF900D18B7A /* TabTodayCell.swift */; };
+		540225DF24E51EF900D18B7A /* PreviewTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D824E51EF900D18B7A /* PreviewTestData.swift */; };
+		540225E024E51EF900D18B7A /* PreviewTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225D824E51EF900D18B7A /* PreviewTestData.swift */; };
 		540225E324E51EF900D18B7A /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225DA24E51EF900D18B7A /* TestListView.swift */; };
 		540225E424E51EF900D18B7A /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225DA24E51EF900D18B7A /* TestListView.swift */; };
 		540225E624E63C4C00D18B7A /* View+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225E524E63C4C00D18B7A /* View+Frame.swift */; };
 		540225E724E63C4C00D18B7A /* View+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225E524E63C4C00D18B7A /* View+Frame.swift */; };
 		540225EA24E6546C00D18B7A /* CGSize+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225E924E6546C00D18B7A /* CGSize+Constants.swift */; };
 		540225EB24E6546C00D18B7A /* CGSize+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540225E924E6546C00D18B7A /* CGSize+Constants.swift */; };
+		5429F54229B14863003090A2 /* TabSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429F54129B14863003090A2 /* TabSearchView.swift */; };
+		5429F54329B14863003090A2 /* TabSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429F54129B14863003090A2 /* TabSearchView.swift */; };
 		5431A55324E66D470075A4A2 /* TestEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A55224E66D470075A4A2 /* TestEnvironmentKey.swift */; };
 		5431A55424E66D470075A4A2 /* TestEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A55224E66D470075A4A2 /* TestEnvironmentKey.swift */; };
 		5431A56024EC60450075A4A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5431A55F24EC60450075A4A2 /* Alamofire */; };
 		5431A56924ECCD2D0075A4A2 /* TVEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56824ECCD2D0075A4A2 /* TVEndPoints.swift */; };
 		5431A56A24ECCD2D0075A4A2 /* TVEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56824ECCD2D0075A4A2 /* TVEndPoints.swift */; };
-		5431A56C24ECE4A20075A4A2 /* TestLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56B24ECE4A20075A4A2 /* TestLazyView.swift */; };
-		5431A56D24ECE4A20075A4A2 /* TestLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56B24ECE4A20075A4A2 /* TestLazyView.swift */; };
+		5431A56C24ECE4A20075A4A2 /* TabTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56B24ECE4A20075A4A2 /* TabTodayView.swift */; };
+		5431A56D24ECE4A20075A4A2 /* TabTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56B24ECE4A20075A4A2 /* TabTodayView.swift */; };
 		5431A56F24EE35C80075A4A2 /* TVScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56E24EE35C80075A4A2 /* TVScheduleModel.swift */; };
 		5431A57024EE35C80075A4A2 /* TVScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A56E24EE35C80075A4A2 /* TVScheduleModel.swift */; };
 		5431A57224EE42CC0075A4A2 /* TVImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A57124EE42CC0075A4A2 /* TVImageModel.swift */; };
@@ -55,10 +55,12 @@
 		5431A58524EE568F0075A4A2 /* TVNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58324EE568F0075A4A2 /* TVNetworkModel.swift */; };
 		5431A58724EE56DF0075A4A2 /* TVCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58624EE56DF0075A4A2 /* TVCountryModel.swift */; };
 		5431A58824EE56DF0075A4A2 /* TVCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58624EE56DF0075A4A2 /* TVCountryModel.swift */; };
-		5431A58D24F841450075A4A2 /* TestGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58C24F841450075A4A2 /* TestGridView.swift */; };
-		5431A58E24F841450075A4A2 /* TestGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58C24F841450075A4A2 /* TestGridView.swift */; };
-		5431A59024F84F640075A4A2 /* TestGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58F24F84F640075A4A2 /* TestGridCell.swift */; };
-		5431A59124F84F640075A4A2 /* TestGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58F24F84F640075A4A2 /* TestGridCell.swift */; };
+		5431A58D24F841450075A4A2 /* TabScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58C24F841450075A4A2 /* TabScheduleView.swift */; };
+		5431A58E24F841450075A4A2 /* TabScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58C24F841450075A4A2 /* TabScheduleView.swift */; };
+		5431A59024F84F640075A4A2 /* TabScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58F24F84F640075A4A2 /* TabScheduleCell.swift */; };
+		5431A59124F84F640075A4A2 /* TabScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431A58F24F84F640075A4A2 /* TabScheduleCell.swift */; };
+		545C10A424FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */; };
+		545C10A524FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */; };
 		54E39BFD24E274D700E9E7DD /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39BFC24E274D700E9E7DD /* Tests_iOS.swift */; };
 		54E39C0824E274D700E9E7DD /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39C0724E274D700E9E7DD /* Tests_macOS.swift */; };
 		54E39C0A24E274D700E9E7DD /* PotpourriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E39BE124E274D400E9E7DD /* PotpourriApp.swift */; };
@@ -90,15 +92,15 @@
 		540225C524E51E7100D18B7A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		540225CF24E51EA600D18B7A /* TVObserverable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVObserverable.swift; sourceTree = "<group>"; };
 		540225D324E51EEC00D18B7A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		540225D724E51EF900D18B7A /* TestMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuCell.swift; sourceTree = "<group>"; };
-		540225D824E51EF900D18B7A /* TestRMData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRMData.swift; sourceTree = "<group>"; };
-		540225D924E51EF900D18B7A /* TestRecipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRecipeView.swift; sourceTree = "<group>"; };
+		540225D724E51EF900D18B7A /* TabTodayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabTodayCell.swift; sourceTree = "<group>"; };
+		540225D824E51EF900D18B7A /* PreviewTestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewTestData.swift; sourceTree = "<group>"; };
 		540225DA24E51EF900D18B7A /* TestListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
 		540225E524E63C4C00D18B7A /* View+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Frame.swift"; sourceTree = "<group>"; };
 		540225E924E6546C00D18B7A /* CGSize+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Constants.swift"; sourceTree = "<group>"; };
+		5429F54129B14863003090A2 /* TabSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSearchView.swift; sourceTree = "<group>"; };
 		5431A55224E66D470075A4A2 /* TestEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironmentKey.swift; sourceTree = "<group>"; };
 		5431A56824ECCD2D0075A4A2 /* TVEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVEndPoints.swift; sourceTree = "<group>"; };
-		5431A56B24ECE4A20075A4A2 /* TestLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLazyView.swift; sourceTree = "<group>"; };
+		5431A56B24ECE4A20075A4A2 /* TabTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTodayView.swift; sourceTree = "<group>"; };
 		5431A56E24EE35C80075A4A2 /* TVScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVScheduleModel.swift; sourceTree = "<group>"; };
 		5431A57124EE42CC0075A4A2 /* TVImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVImageModel.swift; sourceTree = "<group>"; };
 		5431A57424EE467B0075A4A2 /* TVShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
@@ -108,8 +110,9 @@
 		5431A58024EE55F90075A4A2 /* TVShowExternalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowExternalsModel.swift; sourceTree = "<group>"; };
 		5431A58324EE568F0075A4A2 /* TVNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNetworkModel.swift; sourceTree = "<group>"; };
 		5431A58624EE56DF0075A4A2 /* TVCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCountryModel.swift; sourceTree = "<group>"; };
-		5431A58C24F841450075A4A2 /* TestGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGridView.swift; sourceTree = "<group>"; };
-		5431A58F24F84F640075A4A2 /* TestGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGridCell.swift; sourceTree = "<group>"; };
+		5431A58C24F841450075A4A2 /* TabScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScheduleView.swift; sourceTree = "<group>"; };
+		5431A58F24F84F640075A4A2 /* TabScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScheduleCell.swift; sourceTree = "<group>"; };
+		545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
 		54E39BE124E274D400E9E7DD /* PotpourriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotpourriApp.swift; sourceTree = "<group>"; };
 		54E39BE324E274D600E9E7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E39BE824E274D700E9E7DD /* Potpourri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Potpourri.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,13 +167,7 @@
 			children = (
 				540225C524E51E7100D18B7A /* MapView.swift */,
 				5431A55224E66D470075A4A2 /* TestEnvironmentKey.swift */,
-				5431A58F24F84F640075A4A2 /* TestGridCell.swift */,
-				5431A58C24F841450075A4A2 /* TestGridView.swift */,
-				5431A56B24ECE4A20075A4A2 /* TestLazyView.swift */,
 				540225DA24E51EF900D18B7A /* TestListView.swift */,
-				540225D724E51EF900D18B7A /* TestMenuCell.swift */,
-				540225D924E51EF900D18B7A /* TestRecipeView.swift */,
-				540225D824E51EF900D18B7A /* TestRMData.swift */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -188,6 +185,7 @@
 		5431A56424EC60920075A4A2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				540225D824E51EF900D18B7A /* PreviewTestData.swift */,
 				5431A58624EE56DF0075A4A2 /* TVCountryModel.swift */,
 				5431A56824ECCD2D0075A4A2 /* TVEndPoints.swift */,
 				5431A57124EE42CC0075A4A2 /* TVImageModel.swift */,
@@ -279,6 +277,12 @@
 			children = (
 				540225C324E51E7100D18B7A /* CircleImage.swift */,
 				540225C424E51E7100D18B7A /* ImageView.swift */,
+				545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */,
+				5431A58F24F84F640075A4A2 /* TabScheduleCell.swift */,
+				5431A58C24F841450075A4A2 /* TabScheduleView.swift */,
+				5429F54129B14863003090A2 /* TabSearchView.swift */,
+				540225D724E51EF900D18B7A /* TabTodayCell.swift */,
+				5431A56B24ECE4A20075A4A2 /* TabTodayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,7 +371,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					54E39BE724E274D700E9E7DD = {
 						CreatedOnToolsVersion = 12.0;
@@ -451,27 +455,28 @@
 				540225D024E51EA600D18B7A /* TVObserverable.swift in Sources */,
 				5431A57B24EE54440075A4A2 /* TVShowScheduleModel.swift in Sources */,
 				540225C624E51E7100D18B7A /* CircleImage.swift in Sources */,
-				5431A59024F84F640075A4A2 /* TestGridCell.swift in Sources */,
+				5431A59024F84F640075A4A2 /* TabScheduleCell.swift in Sources */,
+				545C10A424FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */,
 				5431A58124EE55F90075A4A2 /* TVShowExternalsModel.swift in Sources */,
-				540225DD24E51EF900D18B7A /* TestMenuCell.swift in Sources */,
+				540225DD24E51EF900D18B7A /* TabTodayCell.swift in Sources */,
 				5431A58424EE568F0075A4A2 /* TVNetworkModel.swift in Sources */,
-				540225DF24E51EF900D18B7A /* TestRMData.swift in Sources */,
+				540225DF24E51EF900D18B7A /* PreviewTestData.swift in Sources */,
 				540225E324E51EF900D18B7A /* TestListView.swift in Sources */,
 				5431A56924ECCD2D0075A4A2 /* TVEndPoints.swift in Sources */,
 				5431A58724EE56DF0075A4A2 /* TVCountryModel.swift in Sources */,
+				5429F54229B14863003090A2 /* TabSearchView.swift in Sources */,
 				540225D424E51EEC00D18B7A /* ContentView.swift in Sources */,
 				5431A57824EE4E690075A4A2 /* String+HTTPS.swift in Sources */,
-				5431A56C24ECE4A20075A4A2 /* TestLazyView.swift in Sources */,
+				5431A56C24ECE4A20075A4A2 /* TabTodayView.swift in Sources */,
 				5431A55324E66D470075A4A2 /* TestEnvironmentKey.swift in Sources */,
 				5431A57E24EE54B90075A4A2 /* TVShowRatingModel.swift in Sources */,
-				5431A58D24F841450075A4A2 /* TestGridView.swift in Sources */,
+				5431A58D24F841450075A4A2 /* TabScheduleView.swift in Sources */,
 				5431A57524EE467B0075A4A2 /* TVShowModel.swift in Sources */,
 				5431A56F24EE35C80075A4A2 /* TVScheduleModel.swift in Sources */,
 				5431A57224EE42CC0075A4A2 /* TVImageModel.swift in Sources */,
 				540225EA24E6546C00D18B7A /* CGSize+Constants.swift in Sources */,
 				540225C824E51E7100D18B7A /* ImageView.swift in Sources */,
 				540225CA24E51E7100D18B7A /* MapView.swift in Sources */,
-				540225E124E51EF900D18B7A /* TestRecipeView.swift in Sources */,
 				54E39C0A24E274D700E9E7DD /* PotpourriApp.swift in Sources */,
 				540225E624E63C4C00D18B7A /* View+Frame.swift in Sources */,
 			);
@@ -484,27 +489,28 @@
 				540225D124E51EA600D18B7A /* TVObserverable.swift in Sources */,
 				5431A57C24EE54440075A4A2 /* TVShowScheduleModel.swift in Sources */,
 				540225C724E51E7100D18B7A /* CircleImage.swift in Sources */,
-				5431A59124F84F640075A4A2 /* TestGridCell.swift in Sources */,
+				5431A59124F84F640075A4A2 /* TabScheduleCell.swift in Sources */,
+				545C10A524FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */,
 				5431A58224EE55F90075A4A2 /* TVShowExternalsModel.swift in Sources */,
-				540225DE24E51EF900D18B7A /* TestMenuCell.swift in Sources */,
+				540225DE24E51EF900D18B7A /* TabTodayCell.swift in Sources */,
 				5431A58524EE568F0075A4A2 /* TVNetworkModel.swift in Sources */,
-				540225E024E51EF900D18B7A /* TestRMData.swift in Sources */,
+				540225E024E51EF900D18B7A /* PreviewTestData.swift in Sources */,
 				540225E424E51EF900D18B7A /* TestListView.swift in Sources */,
 				5431A56A24ECCD2D0075A4A2 /* TVEndPoints.swift in Sources */,
 				5431A58824EE56DF0075A4A2 /* TVCountryModel.swift in Sources */,
+				5429F54329B14863003090A2 /* TabSearchView.swift in Sources */,
 				540225D524E51EEC00D18B7A /* ContentView.swift in Sources */,
 				5431A57924EE4E690075A4A2 /* String+HTTPS.swift in Sources */,
-				5431A56D24ECE4A20075A4A2 /* TestLazyView.swift in Sources */,
+				5431A56D24ECE4A20075A4A2 /* TabTodayView.swift in Sources */,
 				5431A55424E66D470075A4A2 /* TestEnvironmentKey.swift in Sources */,
 				5431A57F24EE54B90075A4A2 /* TVShowRatingModel.swift in Sources */,
-				5431A58E24F841450075A4A2 /* TestGridView.swift in Sources */,
+				5431A58E24F841450075A4A2 /* TabScheduleView.swift in Sources */,
 				5431A57624EE467B0075A4A2 /* TVShowModel.swift in Sources */,
 				5431A57024EE35C80075A4A2 /* TVScheduleModel.swift in Sources */,
 				5431A57324EE42CC0075A4A2 /* TVImageModel.swift in Sources */,
 				540225EB24E6546C00D18B7A /* CGSize+Constants.swift in Sources */,
 				540225C924E51E7100D18B7A /* ImageView.swift in Sources */,
 				540225CB24E51E7100D18B7A /* MapView.swift in Sources */,
-				540225E224E51EF900D18B7A /* TestRecipeView.swift in Sources */,
 				54E39C0B24E274D700E9E7DD /* PotpourriApp.swift in Sources */,
 				540225E724E63C4C00D18B7A /* View+Frame.swift in Sources */,
 			);
@@ -576,6 +582,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -635,6 +642,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -704,8 +712,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -726,8 +736,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -791,6 +803,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -812,6 +825,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

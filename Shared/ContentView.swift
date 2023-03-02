@@ -11,16 +11,23 @@ struct ContentView: View {
     var body: some View {
         TabView {
             let observable = TVObserverable()
-            TestLazyView(scheduleObservable: observable)
+            
+            TabTodayView(scheduleObservable: observable)
                 .tabItem {
-                    Image(systemName: "square.stack.3d.up")
-                    Text("Stack")
+                    Image(systemName: "doc.text.image")
+                    Text("Today")
                 }
                         
-            TestGridView(scheduleObservable: observable)
+            TabScheduleView(scheduleObservable: observable)
                 .tabItem {
-                    Image(systemName: "square.grid.2x2")
-                    Text("Grid")
+                    Image(systemName: "calendar")
+                    Text("Schedule")
+                }
+            
+            TabSearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
         }
     }

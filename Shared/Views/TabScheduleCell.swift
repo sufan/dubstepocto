@@ -1,5 +1,5 @@
 //
-//  TestGridCell.swift
+//  TabScheduleCell.swift
 //  Potpourri
 //
 //  Created by sufan on 8/27/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TestGridCell: View {
+struct TabScheduleCell: View {
     @Environment(\.geometry) var geometry
     
     var schedule: TVScheduleModel
@@ -21,7 +21,7 @@ struct TestGridCell: View {
     }()
     
     var body: some View {
-        NavigationLink(destination: TestRecipeView(show: schedule.show)) {
+        NavigationLink(destination: ShowDetailsView(show: schedule.show)) {
             VStack(spacing: 4) {
                 if let date = schedule.date {
                     Text(dateFormatter.string(from: date))
@@ -43,11 +43,11 @@ struct TestGridCell: View {
     }
 }
 
-struct TestGridCell_Previews: PreviewProvider {
+struct TabScheduleCell_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader(content: { geometry in
             List {
-                TestGridCell(schedule: testSchedule)
+                TabScheduleCell(schedule: testSchedule)
             }
             .environment(\.geometry, geometry.size)
         })

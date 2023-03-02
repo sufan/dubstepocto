@@ -1,5 +1,5 @@
 //
-//  TestGridView.swift
+//  TabScheduleView.swift
 //  Potpourri
 //
 //  Created by sufan on 8/27/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TestGridView: View {
+struct TabScheduleView: View {
     @ObservedObject var scheduleObservable: TVObserverable
     
     var columns = [
@@ -20,7 +20,7 @@ struct TestGridView: View {
                 ScrollView {
                     LazyVGrid(columns: columns) {
                         ForEach(scheduleObservable.schedules) { schedule in
-                            TestGridCell(schedule: schedule)
+                            TabScheduleCell(schedule: schedule)
                         }
                     }
                     .navigationTitle("Schedules")
@@ -34,13 +34,13 @@ struct TestGridView: View {
     }
 }
 
-struct TestGridView_Previews: PreviewProvider {
+struct TabScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TestGridView(scheduleObservable: TVObserverable(source: .preview))
-            TestGridView(scheduleObservable: TVObserverable(source: .preview))
+            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
+            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
                 .previewDevice("iPhone SE (2nd generation)")
-            TestGridView(scheduleObservable: TVObserverable(source: .preview))
+            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
                 .previewLayout(.fixed(width: 568, height: 320))
         }
     }
