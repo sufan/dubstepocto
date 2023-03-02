@@ -1,5 +1,5 @@
 //
-//  TestLazyView.swift
+//  TabTodayView.swift
 //  Potpourri
 //
 //  Created by sufan on 8/18/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TestLazyView: View {
+struct TabTodayView: View {
     @ObservedObject var scheduleObservable: TVObserverable
     
     var body: some View {
@@ -21,13 +21,13 @@ struct TestLazyView: View {
                     
                     LazyVStack {
                         ForEach(scheduleObservable.schedules) { schedule in
-                            TestMenuCell(schedule: schedule)
+                            TabTodayCell(schedule: schedule)
                             Divider()
                                 .padding(.leading)
                         }
                     }
                     .padding(.trailing)
-                    .navigationTitle("Schedules")
+                    .navigationTitle("Today")
                     .environment(\.geometry, geometry.size)
                 }
             })
@@ -38,11 +38,11 @@ struct TestLazyView: View {
     }
 }
 
-struct TestLazyView_Previews: PreviewProvider {
+struct TabTodayView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TestLazyView(scheduleObservable: TVObserverable(source: .preview))
-            TestLazyView(scheduleObservable: TVObserverable(source: .preview))
+            TabTodayView(scheduleObservable: TVObserverable(source: .preview))
+            TabTodayView(scheduleObservable: TVObserverable(source: .preview))
                 .preferredColorScheme(.dark)
                 .previewDevice("iPhone SE (2nd generation)")
         }

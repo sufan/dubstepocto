@@ -1,5 +1,5 @@
 //
-//  TestMenuCell.swift
+//  TabTodayCell.swift
 //  Potpourri
 //
 //  Created by sufan on 8/11/20.
@@ -8,7 +8,7 @@
 import SDWebImageSwiftUI
 import SwiftUI
 
-struct TestMenuCell: View {
+struct TabTodayCell: View {
     @Environment(\.geometry) var geometry
     @State var isPopular = Bool.random()
     
@@ -24,7 +24,7 @@ struct TestMenuCell: View {
     }()
     
     var body: some View {
-        NavigationLink(destination: TestRecipeView(show: schedule.show)) {
+        NavigationLink(destination: ShowDetailsView(show: schedule.show)) {
             HStack(alignment: .center) {
                 WebImage(url: URL(string: schedule.show?.image?.medium.httpsString ?? ""))
                     .resizable()
@@ -57,18 +57,18 @@ struct TestMenuCell: View {
     }
 }
 
-struct TestMenuCell_Previews: PreviewProvider {
+struct TabTodayCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             GeometryReader(content: { geometry in
                 List {
-                    TestMenuCell(schedule: testSchedule)
+                    TabTodayCell(schedule: testSchedule)
                 }
                 .environment(\.geometry, geometry.size)
             })
             GeometryReader(content: { geometry in
                 List {
-                    TestMenuCell(schedule: testSchedules[1])
+                    TabTodayCell(schedule: testSchedules[1])
                 }
                 .environment(\.geometry, geometry.size)
             })

@@ -22,7 +22,7 @@ struct TestListView: View {
                     ForEach(scheduleObservable.schedules) { schedule in
                         // TODO: Fix data to support grouping
                         Section(header: Text(schedule.show?.network?.name ?? "UNKNOWN")) {
-                            TestMenuCell(schedule: schedule)
+                            TabTodayCell(schedule: schedule)
                         }
                     }
                     .onMove(perform: moveRecipe)

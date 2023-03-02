@@ -1,15 +1,13 @@
 //
-//  RecipeView.swift
+//  ShowDetailsView.swift
 //  Potpourri
 //
-//  Created by sufan on 8/11/20.
+//  Created by sufan on 9/1/20.
 //
 
-import MapKit
-import SDWebImageSwiftUI
 import SwiftUI
 
-struct TestRecipeView: View {
+struct ShowDetailsView: View {
     @State private var zoomed = false
     var show: TVShowModel?
     
@@ -35,30 +33,17 @@ struct TestRecipeView: View {
                     
                     Text(show?.summary ?? "N/A")
                         .font(.body)
-                    
-                    HStack {
-                        let hashValue = abs(show?.name.hash ?? 0)
-                        ForEach(1..<(hashValue % 10)+1) { i in
-                            let ingredientIndex = hashValue/(i*10) % unown.count
-                            Image(systemName: unown[ingredientIndex])
-                                .font(.headline)
-                                .imageScale(.large)
-                        }
-                        Spacer()
-                    }
-                    .padding(.top)
                 }
                 .padding()
             }
         }
         .navigationTitle(show?.name ?? "")
-    }
-}
+    }}
 
-struct DetailView_Previews: PreviewProvider {
+struct ShowDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TestRecipeView(show: testShow)
+            ShowDetailsView(show: testShow)
         }
     }
 }
