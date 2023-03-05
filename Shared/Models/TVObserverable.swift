@@ -32,7 +32,14 @@ class TVObserverable: ObservableObject {
     }
     
     private func fetchCharacters() {
-        AF.request(TVEndPoints.baseURL + apiPath)
+        let endPoint = TVEndPoints().endPoint
+        endPoint.path = TVEndPoints.schedulePath
+        
+        guard let url = endPoint.url?.absoluteString else {
+            return
+        }
+        
+        AF.request(url)
             .validate()
             .responseDecodable(of: [TVScheduleModel].self) { response in
                 guard let schedules = response.value else {

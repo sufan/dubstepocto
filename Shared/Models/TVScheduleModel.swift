@@ -17,9 +17,4 @@ struct TVScheduleModel: Decodable, Identifiable {
     let airstamp: String
     let runtime: Int?
     let show: TVShowModel?
-    
-    var date: Date? {
-        let formatter = ISO8601DateFormatter()
-        return formatter.date(from: airstamp)
-    }
 }

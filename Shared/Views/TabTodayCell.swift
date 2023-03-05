@@ -13,45 +13,62 @@ struct TabTodayCell: View {
     @State var isPopular = Bool.random()
     
     private let relativeWidth: CGFloat = 0.28
-    var schedule: TVScheduleModel
+    var schedule: TVScheduleModel?
+    var show: TVShowModel?
     
-    let dateFormatter: DateFormatter = {
+    private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
         formatter.timeStyle = .short
         
         return formatter
     }()
     
     var body: some View {
-        NavigationLink(destination: ShowDetailsView(show: schedule.show)) {
-            HStack(alignment: .center) {
-                WebImage(url: URL(string: schedule.show?.image?.medium.httpsString ?? ""))
-                    .resizable()
-                    .placeholder(Image(systemName: "photo"))
-                    .transition(.fade(duration: 0.5))
-                    .aspectRatio(contentMode: .fit)
-                    .aspectFrame(width: geometry.width * relativeWidth, aspectRatio: .A4)
-                    .cornerRadius(3)
-                    .padding(.horizontal)
-                
-                VStack(alignment: .leading) {
-                    Text(schedule.show?.network?.name ?? "")
-                        .font(.title3)
-                        .foregroundColor(.primary)
-                    Text(schedule.show?.name ?? schedule.name)
-                        .font(.title3)
-                    Text("Season \(NSNumber(value: schedule.season), formatter: NumberFormatter()) Episode \(schedule.number ?? 0)")
-                        .font(.body)
-                        .foregroundColor(.secondary)
-                    if let date = schedule.date {
-                        Text(dateFormatter.string(from: date))
-                            .font(.body)
-                            .foregroundColor(.secondary)
+        NavigationLink(destination: ShowDetailsView(show: show)) {
+            if let show {
+                HStack(alignment: .center) {
+                    WebImage(url: URL(string: show.image?.medium.httpsString ?? ""))
+                        .resizable()
+                        .placeholder(Image(systemName: "photo"))
+                        .transition(.fade(duration: 0.5))
+                        .aspectRatio(contentMode: .fit)
+                        .aspectFrame(width: geometry.width * relativeWidth, aspectRatio: .A4)
+                        .cornerRadius(3)
+                        .padding(.horizontal)
+                    
+                    VStack(alignment: .leading) {
+                        Text(show.network?.name ?? "")
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                            .lineLimit(1)
+                            .multilineTextAlignment(.leading)
+                        Text(show.name)
+                            .font(.title3)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                        if let schedule = schedule {
+                            Text("Season \(NSNumber(value: schedule.season), formatter: NumberFormatter()) Episode \(schedule.number ?? 0)")
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                            if let date = schedule.airstamp.date {
+                                Text(dateFormatter.string(from: date))
+                                    .font(.body)
+                                    .foregroundColor(.secondary)
+                            }
+                        } else {
+                            Text(show.shortDescription)
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.leading)
+                            
+                            Text(show.genresDescription)
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.leading)
+                        }
                     }
+                    Spacer()
                 }
-                
-                Spacer()
             }
         }
     }
@@ -62,7 +79,7 @@ struct TabTodayCell_Previews: PreviewProvider {
         Group {
             GeometryReader(content: { geometry in
                 List {
-                    TabTodayCell(schedule: testSchedule)
+                    TabTodayCell(show: testShow)
                 }
                 .environment(\.geometry, geometry.size)
             })
@@ -74,5 +91,36 @@ struct TabTodayCell_Previews: PreviewProvider {
             })
             .previewDevice("iPhone SE (2nd generation)")
         }
+    }
+}
+
+extension TabTodayCell {
+    init(schedule: TVScheduleModel?) {
+        self.schedule = schedule
+        self.show = schedule?.show
+    }
+    
+    init(show: TVShowModel?) {
+        self.show = show
+    }
+}
+
+private extension TVShowModel {
+    var shortDescription: String {
+        var description = [String]()
+        
+        if let date = premiered?.date {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy"
+            
+            description.append(formatter.string(from: date))
+        }
+        description.append(type)
+        
+        return description.joined(separator: " · ")
+    }
+    
+    var genresDescription: String {
+        return genres.joined(separator: ", ")
     }
 }
