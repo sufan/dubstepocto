@@ -9,21 +9,25 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct ImageView: View {
-    var imageName: String
+    var imageName: String?
     
     var body: some View {
-        if UIImage(named: imageName) != nil {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        } else if UIImage(systemName: imageName) != nil {
-            Image(systemName: imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        } else {
-            WebImage(url: URL(string: imageName))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+        if let imageName {
+            if UIImage(named: imageName) != nil {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            } else if UIImage(systemName: imageName) != nil {
+                Image(systemName: imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            } else {
+                WebImage(url: URL(string: imageName))
+                    .resizable()
+                    .placeholder(Image(systemName: "photo"))
+                    .aspectRatio(contentMode: .fit)
+                    .transition(.fade(duration: 0.5))
+            }
         }
     }
 }
