@@ -23,7 +23,7 @@ struct TabScheduleCell: View {
     var body: some View {
         NavigationLink(destination: ShowDetailsView(show: schedule.show)) {
             VStack(spacing: 4) {
-                if let date = schedule.date {
+                if let date = schedule.airstamp.date {
                     Text(dateFormatter.string(from: date))
                         .font(.title3)
                         .foregroundColor(.primary)

@@ -13,7 +13,7 @@ struct TVShowModel: Decodable, Identifiable {
     let genres: [String]
     let status: String
     let runtime: Int?
-    let premiered: String
+    let premiered: String?
     let officialSite: String?
     let schedule: TVShowScheduleModel
     let rating: TVShowRatingModel
