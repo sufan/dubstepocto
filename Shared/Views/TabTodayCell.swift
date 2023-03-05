@@ -10,7 +10,6 @@ import SwiftUI
 
 struct TabTodayCell: View {
     @Environment(\.geometry) var geometry
-    @State var isPopular = Bool.random()
     
     private let relativeWidth: CGFloat = 0.28
     var schedule: TVScheduleModel?
@@ -33,7 +32,6 @@ struct TabTodayCell: View {
                         .transition(.fade(duration: 0.5))
                         .aspectRatio(contentMode: .fit)
                         .aspectFrame(width: geometry.width * relativeWidth, aspectRatio: .A4)
-                        .cornerRadius(3)
                         .padding(.horizontal)
                     
                     VStack(alignment: .leading) {

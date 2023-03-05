@@ -11,29 +11,28 @@ struct TabTodayView: View {
     @ObservedObject var scheduleObservable: TVObserverable
     
     var body: some View {
-        NavigationView {
-            GeometryReader(content: { geometry in
-                ScrollView {
-                    if scheduleObservable.schedules.count == 0 {
-                        ProgressView()
-                            .offset(y: geometry.size.height/2)
-                    }
-                    
-                    LazyVStack {
-                        ForEach(scheduleObservable.schedules) { schedule in
-                            TabTodayCell(schedule: schedule)
-                            Divider()
-                                .padding(.leading)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                GeometryReader(content: { geometry in
+                    ScrollView {
+                        if scheduleObservable.schedules.count == 0 {
+                            ProgressView()
+                                .offset(y: geometry.size.height/2)
                         }
+                        
+                        LazyVStack {
+                            ForEach(scheduleObservable.schedules) { schedule in
+                                TabTodayCell(schedule: schedule)
+                                Divider()
+                                    .padding(.leading)
+                            }
+                        }
+                        .padding(.trailing)
+                        .navigationTitle("Today")
+                        .environment(\.geometry, geometry.size)
                     }
-                    .padding(.trailing)
-                    .navigationTitle("Today")
-                    .environment(\.geometry, geometry.size)
-                }
-            })
-            
-            Text("Select a show")
-                .font(.largeTitle)
+                })
+            }
         }
     }
 }

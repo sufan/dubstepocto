@@ -15,21 +15,20 @@ struct TabScheduleView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            GeometryReader(content: { geometry in
-                ScrollView {
-                    LazyVGrid(columns: columns) {
-                        ForEach(scheduleObservable.schedules) { schedule in
-                            TabScheduleCell(schedule: schedule)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                GeometryReader(content: { geometry in
+                    ScrollView {
+                        LazyVGrid(columns: columns) {
+                            ForEach(scheduleObservable.schedules) { schedule in
+                                TabScheduleCell(schedule: schedule)
+                            }
                         }
+                        .navigationTitle("Schedules")
+                        .environment(\.geometry, geometry.size)
                     }
-                    .navigationTitle("Schedules")
-                    .environment(\.geometry, geometry.size)
-                }
-            })
-            
-            Text("Select a show")
-                .font(.largeTitle)
+                })
+            }
         }
     }
 }
