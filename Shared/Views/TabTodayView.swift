@@ -42,8 +42,7 @@ struct TabTodayView_Previews: PreviewProvider {
         Group {
             TabTodayView(scheduleObservable: TVObserverable(source: .preview))
             TabTodayView(scheduleObservable: TVObserverable(source: .preview))
-                .previewDevice("iPhone SE (2nd generation)")
-                .preferredColorScheme(.dark)
+                .previewDevice("iPhone SE (3rd generation)")
                 .environment(\.locale, .init(identifier: "en_GB"))
         }
     }

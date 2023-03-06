@@ -38,9 +38,8 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
             ContentView()
+                .previewDevice("iPhone SE (3rd generation)")
                 .environment(\.locale, .init(identifier: "en_GB"))
-                .previewDevice("iPhone SE (2nd generation)")
-                .preferredColorScheme(.dark)
         }
     }
 }

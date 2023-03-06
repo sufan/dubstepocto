@@ -72,8 +72,7 @@ struct TabSearchView_Previews: PreviewProvider {
         Group {
             TabSearchView()
             TabSearchView()
-                .previewDevice("iPhone SE (2nd generation)")
-                .preferredColorScheme(.dark)
+                .previewDevice("iPhone SE (3rd generation)")
                 .environment(\.locale, .init(identifier: "en_GB"))
         }
     }
