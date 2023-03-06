@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Potpourri
+
+  Created by sufan on 3/5/23.
+  
+*/
+
+"MAIN_TABVIEW_TODAY" = "Gejui";
+"MAIN_TABVIEW_TODAY_SEASON_EPISODE %@ %lld" = "Coucem %1@ Okyucejo %lld";
+"MAIN_TABVIEW_SCHEDULE" = "Cseojaro";
+"MAIN_TABVIEW_SEARCH" = "Coulseh";

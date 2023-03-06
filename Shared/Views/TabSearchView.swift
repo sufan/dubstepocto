@@ -28,7 +28,7 @@ struct TabSearchView: View {
                             }
                         }
                         .padding(.trailing)
-                        .navigationTitle("Search")
+                        .navigationTitle("MAIN_TABVIEW_SEARCH")
                         .environment(\.geometry, geometry.size)
                     }
                 })
@@ -69,6 +69,12 @@ struct TabSearchView: View {
 
 struct TabSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        TabSearchView()
+        Group {
+            TabSearchView()
+            TabSearchView()
+                .previewDevice("iPhone SE (2nd generation)")
+                .preferredColorScheme(.dark)
+                .environment(\.locale, .init(identifier: "en_GB"))
+        }
     }
 }
