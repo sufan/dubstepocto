@@ -28,7 +28,7 @@ struct TabTodayView: View {
                             }
                         }
                         .padding(.trailing)
-                        .navigationTitle("Today")
+                        .navigationTitle("MAIN_TABVIEW_TODAY")
                         .environment(\.geometry, geometry.size)
                     }
                 })
@@ -42,8 +42,9 @@ struct TabTodayView_Previews: PreviewProvider {
         Group {
             TabTodayView(scheduleObservable: TVObserverable(source: .preview))
             TabTodayView(scheduleObservable: TVObserverable(source: .preview))
-                .preferredColorScheme(.dark)
                 .previewDevice("iPhone SE (2nd generation)")
+                .preferredColorScheme(.dark)
+                .environment(\.locale, .init(identifier: "en_GB"))
         }
     }
 }

@@ -45,7 +45,7 @@ struct TabTodayCell: View {
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
                         if let schedule = schedule {
-                            Text("Season \(NSNumber(value: schedule.season), formatter: NumberFormatter()) Episode \(schedule.number ?? 0)")
+                            Text("MAIN_TABVIEW_TODAY_SEASON_EPISODE \(NSNumber(value: schedule.season), formatter: NumberFormatter()) \(schedule.number ?? 0)")
                                 .font(.body)
                                 .foregroundColor(.secondary)
                             if let date = schedule.airstamp.date {
@@ -88,6 +88,8 @@ struct TabTodayCell_Previews: PreviewProvider {
                 .environment(\.geometry, geometry.size)
             })
             .previewDevice("iPhone SE (2nd generation)")
+            .preferredColorScheme(.dark)
+            .environment(\.locale, .init(identifier: "en_GB"))
         }
     }
 }

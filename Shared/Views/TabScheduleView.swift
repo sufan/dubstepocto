@@ -24,7 +24,7 @@ struct TabScheduleView: View {
                                 TabScheduleCell(schedule: schedule)
                             }
                         }
-                        .navigationTitle("Schedules")
+                        .navigationTitle("MAIN_TABVIEW_SCHEDULE")
                         .environment(\.geometry, geometry.size)
                     }
                 })
@@ -39,6 +39,8 @@ struct TabScheduleView_Previews: PreviewProvider {
             TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
             TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
                 .previewDevice("iPhone SE (2nd generation)")
+                .preferredColorScheme(.dark)
+                .environment(\.locale, .init(identifier: "en_GB"))
             TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
                 .previewLayout(.fixed(width: 568, height: 320))
         }
