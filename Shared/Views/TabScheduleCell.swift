@@ -29,7 +29,7 @@ struct TabScheduleCell: View {
                         .foregroundColor(.primary)
                 }
 
-                ImageView(imageName: schedule.show?.image?.medium.httpsString ?? "photo")
+                ImageView(imageName: schedule.show?.image?.medium.httpsString ?? Image.placeholder)
                     .aspectRatio(contentMode: .fit)
 
                 if let name = schedule.show?.name {
@@ -47,7 +47,7 @@ struct TabScheduleCell_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader(content: { geometry in
             List {
-                TabScheduleCell(schedule: testSchedule)
+                TabScheduleCell(schedule: previewSchedule)
             }
             .environment(\.geometry, geometry.size)
         })

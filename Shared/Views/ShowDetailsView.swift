@@ -51,7 +51,7 @@ struct ShowDetailsView: View {
 struct ShowDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ShowDetailsView(show: testShow)
+            ShowDetailsView(show: previewShow)
         }
     }
 }

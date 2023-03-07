@@ -33,7 +33,7 @@ struct TabSearchView: View {
                     }
                 })
             }
-            .searchable(text: $searchableText, prompt: "Shows, People, Genres and More")
+            .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
             .onSubmit(of: .search, onSubmit)
         } else {
             // TODO: Fallback on earlier versions
@@ -72,8 +72,7 @@ struct TabSearchView_Previews: PreviewProvider {
         Group {
             TabSearchView()
             TabSearchView()
-                .previewDevice("iPhone SE (2nd generation)")
-                .preferredColorScheme(.dark)
+                .previewDevice("iPhone SE (3rd generation)")
                 .environment(\.locale, .init(identifier: "en_GB"))
         }
     }

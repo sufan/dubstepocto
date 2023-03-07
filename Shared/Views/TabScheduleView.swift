@@ -38,11 +38,8 @@ struct TabScheduleView_Previews: PreviewProvider {
         Group {
             TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
             TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
-                .previewDevice("iPhone SE (2nd generation)")
-                .preferredColorScheme(.dark)
+                .previewDevice("iPhone SE (3rd generation)")
                 .environment(\.locale, .init(identifier: "en_GB"))
-            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
-                .previewLayout(.fixed(width: 568, height: 320))
         }
     }
 }

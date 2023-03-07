@@ -24,7 +24,7 @@ struct ImageView: View {
             } else {
                 WebImage(url: URL(string: imageName))
                     .resizable()
-                    .placeholder(Image(systemName: "photo"))
+                    .placeholder(Image(systemName: Image.placeholder))
                     .aspectRatio(contentMode: .fit)
                     .transition(.fade(duration: 0.5))
             }
@@ -37,7 +37,7 @@ struct ImageView_Previews: PreviewProvider {
         Group {
             ImageView(imageName: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
             ImageView(imageName: "Logo")
-            ImageView(imageName: "photo")
+            ImageView(imageName: Image.placeholder)
             ImageView(imageName: "@")
         }
     }
