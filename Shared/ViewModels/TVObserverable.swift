@@ -1,5 +1,5 @@
 //
-//  TestStoreModel.swift
+//  TVObserverable.swift
 //  Potpourri
 //
 //  Created by sufan on 8/12/20.
@@ -28,7 +28,7 @@ class TVObserverable: ObservableObject {
     }
         
     private func fetchPreview() {
-        self.schedules = testSchedules
+        self.schedules = previewSchedules
     }
     
     private func fetchCharacters() {

@@ -10,3 +10,4 @@
 "MAIN_TABVIEW_TODAY_SEASON_EPISODE %@ %lld" = "Season %@ Episode %lld";
 "MAIN_TABVIEW_SCHEDULE" = "Schedule";
 "MAIN_TABVIEW_SEARCH" = "Search";
+"MAIN_TABVIEW_SEARCH_PROMPT" = "Shows, People, Genres and More";

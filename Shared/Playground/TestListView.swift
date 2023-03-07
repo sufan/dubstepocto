@@ -45,7 +45,7 @@ struct TestListView: View {
     
     func addRecipe() {
         withAnimation {
-            scheduleObservable.schedules.append(testSchedule)
+            scheduleObservable.schedules.append(previewSchedule)
         }
     }
     

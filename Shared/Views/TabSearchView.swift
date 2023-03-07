@@ -33,7 +33,7 @@ struct TabSearchView: View {
                     }
                 })
             }
-            .searchable(text: $searchableText, prompt: "Shows, People, Genres and More")
+            .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
             .onSubmit(of: .search, onSubmit)
         } else {
             // TODO: Fallback on earlier versions

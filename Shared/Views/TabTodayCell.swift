@@ -28,7 +28,7 @@ struct TabTodayCell: View {
                 HStack(alignment: .center) {
                     WebImage(url: URL(string: show.image?.medium.httpsString ?? ""))
                         .resizable()
-                        .placeholder(Image(systemName: "photo"))
+                        .placeholder(Image(systemName: Image.placeholder))
                         .transition(.fade(duration: 0.5))
                         .aspectRatio(contentMode: .fit)
                         .aspectFrame(width: geometry.width * relativeWidth, aspectRatio: .A4)
@@ -77,13 +77,13 @@ struct TabTodayCell_Previews: PreviewProvider {
         Group {
             GeometryReader(content: { geometry in
                 List {
-                    TabTodayCell(show: testShow)
+                    TabTodayCell(show: previewShow)
                 }
                 .environment(\.geometry, geometry.size)
             })
             GeometryReader(content: { geometry in
                 List {
-                    TabTodayCell(schedule: testSchedules[1])
+                    TabTodayCell(schedule: previewSchedules[1])
                 }
                 .environment(\.geometry, geometry.size)
             })
