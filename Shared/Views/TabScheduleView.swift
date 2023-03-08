@@ -17,17 +17,14 @@ struct TabScheduleView: View {
     var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
-                GeometryReader(content: { geometry in
-                    ScrollView {
-                        LazyVGrid(columns: columns) {
-                            ForEach(scheduleObservable.schedules) { schedule in
-                                TabScheduleCell(schedule: schedule)
-                            }
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(scheduleObservable.schedules) { schedule in
+                            TabScheduleCell(schedule: schedule)
                         }
-                        .navigationTitle("MAIN_TABVIEW_SCHEDULE")
-                        .environment(\.geometry, geometry.size)
                     }
-                })
+                    .navigationTitle("MAIN_TABVIEW_SCHEDULE")
+                }
             }
         }
     }
@@ -36,10 +33,16 @@ struct TabScheduleView: View {
 struct TabScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
-            TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
-                .previewDevice("iPhone SE (3rd generation)")
-                .environment(\.locale, .init(identifier: "en_GB"))
+            GeometryReader(content: { geometry in
+                TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
+                    .environment(\.geometry, geometry.size)
+            })
+            GeometryReader(content: { geometry in
+                TabScheduleView(scheduleObservable: TVObserverable(source: .preview))
+                    .environment(\.geometry, geometry.size)
+                    .previewDevice("iPhone SE (3rd generation)")
+                    .environment(\.locale, .init(identifier: "en_GB"))
+            })
         }
     }
 }

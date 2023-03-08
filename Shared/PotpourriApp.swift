@@ -11,7 +11,10 @@ import SwiftUI
 struct PotpourriApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GeometryReader(content: { geometry in
+                ContentView()
+                    .environment(\.geometry, geometry.size)
+            })
         }
     }
 }
