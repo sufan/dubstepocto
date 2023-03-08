@@ -15,16 +15,14 @@ struct TabScheduleView: View {
     ]
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                ScrollView {
-                    LazyVGrid(columns: columns) {
-                        ForEach(scheduleObservable.schedules) { schedule in
-                            TabScheduleCell(schedule: schedule)
-                        }
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(scheduleObservable.schedules) { schedule in
+                        TabScheduleCell(schedule: schedule)
                     }
-                    .navigationTitle("MAIN_TABVIEW_SCHEDULE")
                 }
+                .navigationTitle("MAIN_TABVIEW_SCHEDULE")
             }
         }
     }

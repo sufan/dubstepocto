@@ -726,7 +726,7 @@
 				DEVELOPMENT_ASSET_PATHS = Shared/Playground;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -748,7 +748,7 @@
 				DEVELOPMENT_ASSET_PATHS = Shared/Playground;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,11 +774,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = impawssible.Potpourri;
 				PRODUCT_NAME = Potpourri;
 				SDKROOT = macosx;
@@ -798,11 +799,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = impawssible.Potpourri;
 				PRODUCT_NAME = Potpourri;
 				SDKROOT = macosx;
@@ -816,7 +818,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,7 +839,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,25 +14,23 @@ struct TabSearchView: View {
     @State private var searchResults = [TVShowSearchModel]()
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(searchResults) { result in
-                            if let show = result.show {
-                                TabTodayCell(show: show)
-                                Divider()
-                                    .padding(.leading)
-                            }
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(searchResults) { result in
+                        if let show = result.show {
+                            TabTodayCell(show: show)
+                            Divider()
+                                .padding(.leading)
                         }
                     }
-                    .padding(.trailing)
-                    .navigationTitle("MAIN_TABVIEW_SEARCH")
                 }
+                .padding(.trailing)
+                .navigationTitle("MAIN_TABVIEW_SEARCH")
             }
-            .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
-            .onSubmit(of: .search, onSubmit)
         }
+        .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
+        .onSubmit(of: .search, onSubmit)
     }
     
     func onSubmit() {
