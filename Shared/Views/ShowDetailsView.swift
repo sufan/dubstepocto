@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ShowDetailsView: View {
-    @Environment(\.geometry) var geometry
-    
     private let relativeWidth: CGFloat = 0.9
-
+    
+    @Environment(\.geometry) var geometry
+    @State private var summaryAttributed: NSAttributedString?
+    
     var show: TVShowModel?
     
     var body: some View {
@@ -38,11 +39,15 @@ struct ShowDetailsView: View {
                         }
                     }
                     Divider()
-                    Text(show.summary ?? "")
-                        .font(.body)
+                    if let summaryAttributed {
+                        Text(formatSummary(summaryAttributed))
+                    }
                 }
                 .navigationTitle(show.name)
                 .padding(.horizontal)
+                .task {
+                    summaryAttributed = show.summary?.attributedHTML
+                }
             }
         }
     }
@@ -66,6 +71,20 @@ struct ShowDetailsView_Previews: PreviewProvider {
                 }
             })
         }
+    }
+}
+
+private extension ShowDetailsView {
+    // changed default font to dynamic font.  this remove bold and italics attributed
+    // TODO: fix html attributed string to use dynamic font
+    func formatSummary(_ text: NSAttributedString?) -> AttributedString {
+        guard let text else {
+            return AttributedString()
+        }
+        
+       var formatedSummary = AttributedString(text)
+        formatedSummary.font = .body
+        return formatedSummary
     }
 }
 
