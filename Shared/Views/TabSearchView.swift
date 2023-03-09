@@ -14,31 +14,23 @@ struct TabSearchView: View {
     @State private var searchResults = [TVShowSearchModel]()
     
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack {
-                GeometryReader(content: { geometry in
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(searchResults) { result in
-                                if let show = result.show {
-                                    TabTodayCell(show: show)
-                                    Divider()
-                                        .padding(.leading)
-                                }
-                            }
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(searchResults) { result in
+                        if let show = result.show {
+                            TabTodayCell(show: show)
+                            Divider()
+                                .padding(.leading)
                         }
-                        .padding(.trailing)
-                        .navigationTitle("MAIN_TABVIEW_SEARCH")
-                        .environment(\.geometry, geometry.size)
                     }
-                })
+                }
+                .padding(.trailing)
+                .navigationTitle("MAIN_TABVIEW_SEARCH")
             }
-            .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
-            .onSubmit(of: .search, onSubmit)
-        } else {
-            // TODO: Fallback on earlier versions
-            Text("Only available in iOS 16.0 or newer")
         }
+        .searchable(text: $searchableText, prompt: "MAIN_TABVIEW_SEARCH_PROMPT")
+        .onSubmit(of: .search, onSubmit)
     }
     
     func onSubmit() {
@@ -70,10 +62,16 @@ struct TabSearchView: View {
 struct TabSearchView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TabSearchView()
-            TabSearchView()
-                .previewDevice("iPhone SE (3rd generation)")
-                .environment(\.locale, .init(identifier: "en_GB"))
+            GeometryReader(content: { geometry in
+                TabSearchView()
+                    .environment(\.geometry, geometry.size)
+            })
+            GeometryReader(content: { geometry in
+                TabSearchView()
+                    .environment(\.geometry, geometry.size)
+                    .previewDevice("iPhone SE (3rd generation)")
+                    .environment(\.locale, .init(identifier: "en_GB"))
+            })
         }
     }
 }

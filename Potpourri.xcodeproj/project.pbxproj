@@ -63,6 +63,8 @@
 		5439A18129B2FAAF006FA9E8 /* TVShowSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439A17F29B2FAAF006FA9E8 /* TVShowSearchModel.swift */; };
 		545A9DB729B6B6C5000BC10D /* Image+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545A9DB629B6B6C5000BC10D /* Image+Placeholder.swift */; };
 		545A9DB829B6B6C5000BC10D /* Image+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545A9DB629B6B6C5000BC10D /* Image+Placeholder.swift */; };
+		545A9DC129B6CA9C000BC10D /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545A9DC029B6CA9C000BC10D /* String+HTML.swift */; };
+		545A9DC229B6CA9C000BC10D /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545A9DC029B6CA9C000BC10D /* String+HTML.swift */; };
 		545C10A424FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */; };
 		545C10A524FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */; };
 		5495DB6529B325EE007FFA61 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495DB6429B325EE007FFA61 /* String+Date.swift */; };
@@ -122,6 +124,7 @@
 		5431A58F24F84F640075A4A2 /* TabScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScheduleCell.swift; sourceTree = "<group>"; };
 		5439A17F29B2FAAF006FA9E8 /* TVShowSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowSearchModel.swift; sourceTree = "<group>"; };
 		545A9DB629B6B6C5000BC10D /* Image+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Placeholder.swift"; sourceTree = "<group>"; };
+		545A9DC029B6CA9C000BC10D /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
 		545C10A324FF5CA4000F40D6 /* ShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
 		5495DB6429B325EE007FFA61 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		54E39BE124E274D400E9E7DD /* PotpourriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotpourriApp.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 			children = (
 				540225E924E6546C00D18B7A /* CGSize+Constants.swift */,
 				5495DB6429B325EE007FFA61 /* String+Date.swift */,
+				545A9DC029B6CA9C000BC10D /* String+HTML.swift */,
 				5431A57724EE4E690075A4A2 /* String+HTTPS.swift */,
 				540225E524E63C4C00D18B7A /* View+Frame.swift */,
 			);
@@ -491,6 +495,7 @@
 				540225D024E51EA600D18B7A /* TVObserverable.swift in Sources */,
 				5431A57B24EE54440075A4A2 /* TVShowScheduleModel.swift in Sources */,
 				540225C624E51E7100D18B7A /* CircleImage.swift in Sources */,
+				545A9DC129B6CA9C000BC10D /* String+HTML.swift in Sources */,
 				5431A59024F84F640075A4A2 /* TabScheduleCell.swift in Sources */,
 				545C10A424FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */,
 				5431A58124EE55F90075A4A2 /* TVShowExternalsModel.swift in Sources */,
@@ -528,6 +533,7 @@
 				540225D124E51EA600D18B7A /* TVObserverable.swift in Sources */,
 				5431A57C24EE54440075A4A2 /* TVShowScheduleModel.swift in Sources */,
 				540225C724E51E7100D18B7A /* CircleImage.swift in Sources */,
+				545A9DC229B6CA9C000BC10D /* String+HTML.swift in Sources */,
 				5431A59124F84F640075A4A2 /* TabScheduleCell.swift in Sources */,
 				545C10A524FF5CA4000F40D6 /* ShowDetailsView.swift in Sources */,
 				5431A58224EE55F90075A4A2 /* TVShowExternalsModel.swift in Sources */,
@@ -726,7 +732,7 @@
 				DEVELOPMENT_ASSET_PATHS = Shared/Playground;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -748,7 +754,7 @@
 				DEVELOPMENT_ASSET_PATHS = Shared/Playground;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,11 +780,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = impawssible.Potpourri;
 				PRODUCT_NAME = Potpourri;
 				SDKROOT = macosx;
@@ -798,11 +805,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = impawssible.Potpourri;
 				PRODUCT_NAME = Potpourri;
 				SDKROOT = macosx;
@@ -816,7 +824,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,7 +845,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
